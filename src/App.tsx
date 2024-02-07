@@ -20,7 +20,11 @@ export function App() {
 
       <NewNoteCard/>
          
-      <NoteCard date={new Date()} content="Hello World"/>
+      <NoteCard note={{
+        date: new Date(),
+        content: 'Hello World'
+      }}/>
+     
   
 
     </div>

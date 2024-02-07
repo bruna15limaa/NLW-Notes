@@ -1,30 +1,26 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Projeto em TypeScript com Tailwind CSS e Radix UI
+Bem-vindo ao repositório do meu projeto desenvolvido em TypeScript, uma linguagem de programação altamente tipada que oferece maior robustez ao código. Este projeto faz uso das modernas tecnologias Tailwind CSS e Radix UI para proporcionar uma experiência de desenvolvimento eficiente e uma interface de usuário elegante.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+TypeScript: Desenvolva com confiança, aproveitando os benefícios da tipagem estática e um conjunto avançado de recursos oferecidos pelo TypeScript.
 
-## Expanding the ESLint configuration
+Tailwind CSS: Simplifique o styling do seu aplicativo com o Tailwind CSS, uma estrutura utility-first que permite estilos flexíveis e de fácil manutenção.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Radix UI: Aprimore a usabilidade do seu projeto com componentes ricos e acessíveis fornecidos pelo Radix UI. Componentes como menus e modais são tratados de forma elegante e acessível.
 
-- Configure the top-level `parserOptions` property like this:
+## Destaques do Repositório
+src/: Explore o diretório de código-fonte, onde o TypeScript é utilizado para criar uma base sólida para o seu aplicativo.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+src/styles/: Conheça os estilos do projeto, estabelecidos de maneira eficiente com a abordagem utility-first do Tailwind CSS.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+src/components/: Descubra como o Radix UI é integrado para oferecer componentes ricos e interativos, melhorando a experiência do usuário.
+
+## Como Contribuir
+Se você estiver interessado em contribuir ou fornecer feedback, sinta-se à vontade para abrir issues ou enviar pull requests. Estou aberto a sugestões e melhorias para tornar este projeto ainda mais robusto e atraente.
+
+Agradeço por explorar este repositório! Espero que as tecnologias escolhidas tornem o desenvolvimento e a experiência do usuário mais agradáveis e eficientes.
+
+Adapte conforme necessário para refletir detalhes específicos do seu projeto.
