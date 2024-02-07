@@ -7,9 +7,9 @@ Bem-vindo ao repositório do meu projeto desenvolvido em TypeScript, uma linguag
 
 TypeScript: Desenvolva com confiança, aproveitando os benefícios da tipagem estática e um conjunto avançado de recursos oferecidos pelo TypeScript.
 
-Tailwind CSS: Simplifique o styling do seu aplicativo com o Tailwind CSS, uma estrutura utility-first que permite estilos flexíveis e de fácil manutenção.
+Tailwind CSS(https://tailwindcss.com/): Simplifique o styling do seu aplicativo com o Tailwind CSS, uma estrutura utility-first que permite estilos flexíveis e de fácil manutenção.
 
-Radix UI: Aprimore a usabilidade do seu projeto com componentes ricos e acessíveis fornecidos pelo Radix UI. Componentes como menus e modais são tratados de forma elegante e acessível.
+Radix UI (https://www.radix-ui.com/): Aprimore a usabilidade do seu projeto com componentes ricos e acessíveis fornecidos pelo Radix UI. Componentes como menus e modais são tratados de forma elegante e acessível.
 
 ## Destaques do Repositório
 src/: Explore o diretório de código-fonte, onde o TypeScript é utilizado para criar uma base sólida para o seu aplicativo.
