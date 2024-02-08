@@ -15,6 +15,10 @@ export function NewNoteCard() {
     }
   }
 
+  function handleSaveNote() {
+
+  }
+
     return(
       <Dialog.Root>
         <Dialog.Trigger className='rounded-md flex flex-col bg-slate-700 text-left p-5 gap-3 overflow-hidden hover:ring-2 outline-none focus-visible:ring-2 focus-visible:ring-lime-400' >
@@ -33,6 +37,9 @@ export function NewNoteCard() {
                 <X className='size-5'/>
             </Dialog.Close>
             
+            <form onSubmit={handleSaveNote} className='flex-1 flex flex-col'>
+
+
             <div className='flex flex-1 flex-col gap-3 p-5'>
             <span className='text-sm font-medium text-slate-300'>
             Adicionar nota
@@ -56,6 +63,7 @@ export function NewNoteCard() {
             >
              Salvar nota
             </button>
+            </form>
             </Dialog.Content>
       </Dialog.Portal>
       </Dialog.Root>
