@@ -27,6 +27,10 @@ export function NewNoteCard({ onNoteCrerated }: NewNoteCardProps) {
   function handleSaveNote(event:FormEvent) {
    event.preventDefault()
 
+   if (content === '') {
+    return
+   }
+
    onNoteCrerated(content)
 
    setContent('')
@@ -36,8 +40,45 @@ export function NewNoteCard({ onNoteCrerated }: NewNoteCardProps) {
   }
 
   function handleStartRecording() {
-    setIsRecording(true)
-  }
+    const isSpeechRecognitionAPIAvailable = 'SpeechRecognition' in window
+      || 'webkitSpeechRecognition' in window
+
+      if (! isSpeechRecognitionAPIAvailable) {
+        alert('Infelizmente seu navegador não supporta a API de gravação!')
+        return
+      }
+
+      setIsRecording(true)
+      setShouldShowOnboarding(false)
+
+      const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition
+
+      const speechRecognition = new SpeechRecognitionAPI()
+
+      speechRecognition.lang = 'pt-BR'
+      speechRecognition.continuous = true
+      speechRecognition.maxAlternatives = 1
+      speechRecognition.interimResults = true
+
+      speechRecognition.onresult = (event) => {
+        const transcription = Array.from(event.results).reduce((text, result) => {
+          return text.concat(result[0].transcript)
+        }, '')
+
+        setContent(transcription)
+      }
+
+      speechRecognition.onerror= (event)=> {
+        console.error(event)
+      }
+  
+      speechRecognition.start()
+  
+}
+
+ 
+
+
 
   function handleStopRecording() {
     setIsRecording(false)
@@ -88,7 +129,7 @@ export function NewNoteCard({ onNoteCrerated }: NewNoteCardProps) {
               onClick={handleStopRecording}
               className='w-full bg-slate-900 flex items-center justify-center gap-2 py-4 text-center text-sm text-slate-300 outline-none font-meduim hover:text-slate-100'
               >
-                <div className='size-3 rounded-full bg-red-500'/>
+                <div className='size-3 rounded-full bg-red-500 animate-pulse'/>
                Gravando! (clique para interromper)
               </button>
             ):(
