@@ -14,7 +14,7 @@ export function App() {
 
   function onNoteCrerated(content: string) {
     const newNote = {
-      id: Math.random(),
+      id: crypto.randomUUID(),
       date: new Date(), 
       content,
     }
